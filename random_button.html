@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="buttonOne" onclick="showEasterEgg(0)">Hey</button>
+    <button id="buttonTwo" onclick="showEasterEgg(1)">Hey</button>
+    <button id="buttonThree" onclick="showEasterEgg(2)">Hey</button>
+    <button id="buttonFour" onclick="showEasterEgg(3)">Hey</button>
+    <button id="buttonFive" onclick="showEasterEgg(4)">Hey</button>
+    <div id="imgEasterEgge">
+      <iframe
+        hidden="true"
+        id="easterEgg"
+        src="https://giphy.com/embed/GL9C4Dpmc2Ig1Bq9FT"
+        width="480"
+        height="480"
+        frameborder="0"
+        class="giphy-embed"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <script>
+      function getRandomInt() {
+        return Math.floor(Math.random() * 5);
+      }
+
+      let randomNumber = getRandomInt();
+       let divComCoelho = document.getElementById("easterEgg");
+      function showEasterEgg(number) {
+          if (number == randomNumber) {
+          divComCoelho.hidden = false;
+        } else {
+          divComCoelho.hidden = true;
+        }
+      }
+    </script>
+  </body>
+</html>

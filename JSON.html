@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="fetchMyApi()">search</button>
+    <input  value="deu" type="text" id="myInput">
+    <div style="display:flex; justify-content: space-between;" id="coutries"></div>
+</body>
+
+    <script>
+async function fetchMyApi() {
+    let a = document.getElementById("myInput").value
+   let search =  "https://restcountries.com/v2/lang/" + a;
+  let response = await fetch(search);
+  let result = await response.json();
+
+    for (let index = 0; index < result.length; index++) {
+    let nameElement = document.createElement("div");
+    nameElement.textContent = result[index].name
+    let capitalElement = document.createElement("div");
+    capitalElement.textContent = result[index].capital
+    let populationElement = document.createElement("div");
+    populationElement.textContent = result[index].population
+    let flagElement = document.createElement("img");
+    flagElement.src = result[index].flag;
+    flagElement.width = 200
+    
+
+    document.body.appendChild(nameElement);
+    document.body.appendChild(capitalElement);
+    document.body.appendChild(populationElement);
+    document.body.appendChild(flagElement);
+    
+
+      
+  }
+
+}
+
+
+
+
+</script>
+
+</html>

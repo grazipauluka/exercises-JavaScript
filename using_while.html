@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Document</title>
+</head>
+<body>
+
+  <div id="myDiv"></div>
+    <script>
+
+// task 1: Output your name five times
+let name = 0;
+while(name<5){
+console.log("Grazi")
+name++
+}
+// task 2:Output the squares of the first 10 numbers starting with 1 (1, 4, 9, 16, ...)
+
+let numberSquare = 1;
+while(numberSquare<=10){
+console.log(numberSquare * numberSquare)
+numberSquare++
+}
+
+// task 3: Output the sum of the first 10 numbers (e.g. 1 + 2 + 3 + ...)
+
+let numberSum = 1;
+let soma = 0;
+while(numberSum <=10){
+soma = soma + numberSum;
+numberSum++
+}
+console.log(soma)
+
+
+
+// tOutput a countdown from 10 to 0 to console (e.g. 10, 9, 8, ...)
+let countdown = 10;
+while(countdown > 0){
+console.log(countdown)
+countdown--
+}
+
+// Bonus: Instead of zero, output "liftoff!"
+
+while(countdown >= 0){
+  if (countdown == 0){
+    console.log("liftoff")
+  }
+  else{
+  console.log(countdown)
+}
+
+
+//Bonus: Instead of counting down to console.log, write the output to a div element
+
+let number = 10;
+let result = 0;
+while(number >= 0){
+    let myDiv = document.getElementById("myDiv");
+  console.log(number)
+  result = result + number + '</br>'  ;
+  
+  
+
+  number--
+}
+myDiv.innerHTML = result 
+
+for (let index = 0; index <= 100; index++) {
+  if(index%2 === 0){
+    console.log(index)
+
+  }
+  
+}
+
+
+countdown--
+}
+let i = 0;
+let s = "*";
+while(i <=5){
+console.log(s)
+s = s + "*"
+i++
+}
+
+
+
+let totalLinhas = 10
+let totalAsteriscos = 10
+
+
+let contadorLinhas = 0
+
+while(contadorLinhas < totalLinhas){
+  let contadorAsteriscos = 0
+  let stringInicialAstericos = ""
+  
+  while (contadorAsteriscos < totalAsteriscos) {
+    stringInicialAstericos += "*"
+    contadorAsteriscos++
+  }
+  
+  console.log(stringInicialAstericos)
+  
+  totalAsteriscos--
+  contadorLinhas++
+}
+
+    </script>
+</body>
+</html>

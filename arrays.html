@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* TASK 1
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Step 1: Create an array with your 3 top friends
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Step 2: Say "hello" on console to each friend */
+
+        let topFriends = ["Maiana", "Cris", "Liana"];
+        topFriends[0] = "Ana";
+        console.log("Hello, " + topFriends[0]);
+
+        console.log("Hello, " + topFriends[1]);
+
+        console.log("Hello, " + topFriends[2]);
+
+        /* Step 2: Say "hello" on console to each friend, using a for loop! */
+        for (let i = 0; i < topFriends.length; i++) {
+            console.log("Hello, " + topFriends[i]);
+        }
+
+/* Create a function each that takes an array and outputs the following:
+Output the last element of the array
+Output the sum of all the numbers in the array
+Output the average (mean) of all numbers (sum of all numbers divided by amount of numbers)
+BONUS: Output the largest number of the array */
+
+        let numbers = [2, 3, 8, 6, 9, 25, 10, 1];
+
+        function lastElement(array) {
+            console.log(array[array.length - 1]);
+        }
+        lastElement(numbers);
+
+        let som = 0;
+
+        function sum(number) {
+            for (let index = 0; index < number.length; index++) {
+                som = som + number[index];
+            }
+            console.log(som);
+            return som;
+        }
+        sum(numbers);
+
+        function average(number) {
+            console.log(som / number.length);
+        }
+        average(numbers);
+
+        function largestNumber(number) {
+            let largest = 0;
+            for (let index = 0; index < numbers.length; index++) {
+                if (numbers[index] > largest) {
+                    largest = numbers[index];
+                }
+            }
+            console.log(largest);
+        }
+
+        largestNumber(numbers);
+
+
+
+        /*Write a function that takes a number and an array of numbers as input parameter. 
+        Return the index of the number if it is in the array, otherwise return -1
+        ex: given inputs 5 and [2, 1, 5, 6, 3], return 2 */
+
+        function returnNumber(n, array) {
+            for (let index = 0; index < array.length; index++) {
+                if (n == array[index]) {
+                    console.log([index])
+                }
+                return -1
+            }
+
+        }
+
+
+        let myTest = [1, 2, 3, 4, 5];
+
+        console.log(returnNumber(6, myTest));
+    </script>
+</body>
+
+</html>

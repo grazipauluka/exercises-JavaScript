@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <body>
+        <h1>Watch Best Movies of All the Time</h1>
+        <div style="display:flex; justify-content: space-between;" id="movies"></div>
+      </body>
+
+    <script>
+/* EXERCISE 1
+Given an array of movie posters urls, create a web page that shows each poster.
+You should use createElement() and appendChild() to the document.body to complete this task.
+See the example below to create a new image element in the document.body 
+
+let imageElement = document.createElement("img");
+imageElement.src = `https://images.unsplash.com/photo-1596262842190-768d6bd1d819?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2752&q=80`;
+imageElement.width = 200;
+document.body.appendChild(imageElement); */
+
+let moviePosters = [
+  "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
+  "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg",
+  "https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX800_.jpg",
+  "https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg",
+  "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1055_.jpg",
+];
+
+for (let index = 0; index < moviePosters.length; index++) {
+    let imageElement = document.createElement("img");
+    imageElement.src = moviePosters[index]
+    imageElement.width = 200;
+    document.body.appendChild(imageElement);  
+}
+
+/*EXAMPLE 2: DROPDOWN
+let array = ["Volvo", "Saab", "Mercades", "Audi"];
+
+//Create and append select list
+let selectList = document.createElement("select");
+selectList.id = "mySelect";
+document.body.appendChild(selectList);
+
+//Create and append the options
+for (let i = 0; i < array.length; i++) {
+  let option = document.createElement("option");
+  option.value = array[i];
+  option.text = array[i];
+  selectList.appendChild(option);
+}           */
+
+/*EXCERCISE 2
+Given an array of movie objects:
+Create a new image img element that shows the poster
+Create a header h2 element that shows the movie title next to the image.
+Remember: movieObjs[0].title; // to access to an specific attribute of the object */
+
+let movies = [
+  {
+    title: "The Godfather",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
+    trailer: "https://www.imdb.com/video/vi1348706585/?ref_=nv_sr_srsg_1",
+  },
+  {
+    title: "The Dark Knight",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg",
+    trailer: "https://www.imdb.com/video/vi324468761/?ref_=nv_sr_srsg_1",
+  },
+  {
+    title: "Lord Of The Rings",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX800_.jpg",
+    trailer:
+      "https://www.imdb.com/video/vi718127897/?playlistId=tt0167260&ref_=tt_pr_ov_vi",
+  },
+  {
+    title: "Matrix",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg",
+    trailer: "https://www.imdb.com/video/vi1943978777/?ref_=nv_sr_srsg_1",
+  },
+  {
+    title: "Pulp Fiction",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1055_.jpg",
+    trailer: "https://www.imdb.com/video/vi2620371481/?ref_=nv_sr_srsg_1",
+  },
+  {
+    title: "Inception",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_FMjpg_UX700_.jpg",
+    trailer: "https://www.imdb.com/video/vi2959588889/?ref_=nv_sr_srsg_1",
+  },
+];
+for (let index = 0; index < movies.length; index++) {
+    let imageElement2 = document.createElement("img");
+    imageElement2.src = movies[index].poster
+    imageElement2.width = 200;
+    document.body.appendChild(imageElement2);
+    let titleElement = document.createElement("h2");
+    titleElement.textContent = movies[index].title
+    document.body.appendChild(titleElement);
+}
+
+/*EXCERCISE 3
+
+Create a new div element that contains two elements inside the div (children): An image img and a header h2
+<div>
+  <img src="#" />
+  <h2>The Godfather</h2>
+</div> */
+// document.getElementById("myList").appendChild();
+
+for (let index = 0; index < movies.length; index++) {
+    let imageElement1 = document.createElement("div");
+    let imageElement2 = document.createElement("img");
+    imageElement2.src = movies[index].poster
+    imageElement2.width = 200;
+
+    document.getElementById("movies").appendChild(imageElement1);
+    let myTrailer = document.createElement("a")
+    myTrailer.setAttribute("href", movies[index].trailer)
+    imageElement1.appendChild(myTrailer)
+    imageElement2.onclick = openTrailer;
+    function openTrailer() {
+        window.open(myTrailer, "_blank");   
+    }
+    imageElement1.appendChild(imageElement2);
+    let titleElement = document.createElement("h2");
+    titleElement.textContent = movies[index].title
+    imageElement1.appendChild(titleElement);
+}
+        
+</script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="redDiv"> Hello
+  
+        <button onclick="chanceRed()">Click me</button>
+        </div>
+          
+      
+          <div id="counterDiv">Click</div>
+        
+          <button onclick="counterButton()">Click</button>
+      
+      
+          <p>the amount of hummus servings:</p> 
+          <input type="number" id="amount" min="0" value="0" oninput="amountChanged()">
+          
+        <br>
+        <p>the amount of chocolate servings:</p> 
+          <input type="number" id="amount2" min="0" value="0" oninput="amountChanged()">
+      
+        
+        <div id="totalPriceDiv">Total Price</div>
+      
+      </body>
+
+    <script>
+
+
+function chanceRed(){
+    let myDiv = document.getElementById("redDiv")
+    redDiv.style.backgroundColor = "red";
+
+}
+
+let counter = 0;1
+function counterButton(){
+    counter = counter +1;
+    let divAmount = document.getElementById("counterDiv")
+    counterDiv.textContent = "You click " + counter + " times";
+  
+}
+
+let priceHummus = 10;
+let priceChocolate = 5
+
+function amountChanged (){
+  let  totalPriceHummus = priceHummus * amount.valueAsNumber;
+  let  totalPriceChocolate = priceChocolate * amount2.valueAsNumber;
+  let total = totalPriceHummus + totalPriceChocolate;
+  totalPriceDiv.textContent = "Total price is " + total;
+}
+
+    </script>
+    
+</body>
+</html>

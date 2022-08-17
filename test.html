@@ -1,0 +1,104 @@
+<html>
+  <head>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  </head>
+  <body>
+    <div id="myGraph"></div>
+    <div id="myGraph2"></div>
+    <div id="myDiv"></div>
+    <div id="myDiv2"></div>
+
+    <script>
+      let dataSet1 = {
+        x: [1,  2, 3,  4],
+        y: [0, 12, 8, 17],
+        type: 'scatter'
+      };
+
+      Plotly.newPlot('myGraph', [dataSet1]);
+
+      let temperatures = [
+    13.260074,
+    14.244656,
+    13.832573,
+    15.160488,
+    16.392155,
+    14.82882,
+    17.242157,
+    14.527569,
+    13.71507,
+    18.271322,
+    21.44132,
+    17.628407,
+    15.882572,
+    15.911738,
+    15.734656,
+];
+let myDataTem = {
+    y: [
+    13.260074,
+    14.244656,
+    13.832573,
+    15.160488,
+    16.392155,
+    14.82882,
+    17.242157,
+    14.527569,
+    13.71507,
+    18.271322,
+    21.44132,
+    17.628407,
+    15.882572,
+    15.911738,
+    15.734656,
+],
+    x: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+}
+      Plotly.newPlot('myGraph2', [myDataTem]);
+
+      var data = [
+  {
+    x: ['giraffes', 'orangutans', 'monkeys'],
+    y: [20, 14, 23],
+    type: 'bar'
+  }
+];
+
+Plotly.newPlot('myDiv', data);
+
+let population = [];
+async function fetchMyApi() {
+  let search =  "https://restcountries.com/v3.1/alpha?codes=de,fr,be";
+  let response = await fetch(search);
+  result = await response.json();
+   
+  for (let index = 0; index < result.length; index++) {
+    population.push(result[index].population)
+    console.log(population)
+  }
+
+
+  var myData = [
+  {
+    x: ['de','fr','be'],
+    y: population,
+    type: 'bar'
+    
+
+}
+]
+Plotly.newPlot('myGraph2',myData)
+;
+}
+fetchMyApi()
+console.log(population)
+
+
+
+
+
+console.log(population)
+
+ </script>
+  </body>
+</html>

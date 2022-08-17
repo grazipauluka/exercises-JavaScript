@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="resultArea" value="0">
+
+</div>
+
+<div class="container">
+<div class="row">
+    <input class="grey" type="button"  value="AC" id="reset" onclick="reset()">
+    <input class="grey" type="button"  value="DEL" id="delete" onclick="del()">
+    <input class="grey" type="button" value="%" id="percentage" onclick="percentage()">
+    <input class="mostard" type="button" value="÷" onclick="input('/')">
+
+</div>
+<div class="row">
+    <input class="numbers" type="button" value="7" onclick="input('7')">
+    <input class="numbers" type="button" value="8" onclick="input('8')">
+    <input class="numbers" type="button" value="9" onclick="input('9')">
+    <input class="mostard" type="button" value="x" onclick="input('*')">
+
+</div>
+<div class="row">
+    <input class="numbers" type="button"  value="4" onclick="input('4')">
+    <input class="numbers" type="button"  value="5" onclick="input('5')">
+    <input class="numbers" type="button"  value="6" onclick="input('6')">
+    <input class="mostard" type="button" value="-" onclick="input('-')">
+</div>
+<div class="row">
+    <input class="numbers" type="button"  value="1" onclick="input('1')">
+    <input class="numbers" type="button"  value="2" onclick="input('2')">
+    <input class="numbers" type="button"  value="3" onclick="input('3')">
+    <input class="mostard" type="button"  value="+" onclick="input('+')">
+</div>
+<div class="row">
+    <input class="numbers" type="button"  value="0" id="zero" onclick="input('0')">
+    <input class="numbers" type="button"  value="." onclick="input('.')">
+    <input class="mostard" type="button"  value="=" id="equals" onclick="calc()">
+</div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+
+      function spaces (){
+      document.write("<br>")
+      document.write("___________________________")
+      document.write("<br>")
+      }
+
+      // triagulo decrescente
+      let ast = "*";
+      let number = 5
+      for (let index = 0; index < 5; index++) {
+          for (let index = 0; index < number; index++) {
+      document.write(ast)
+          }
+      document.write("<br>")
+      number--
+      }
+
+      spaces()
+
+      //coluna com só um *
+      for (let index = 0; index < 5; index++) {
+         
+        document.write(ast)
+        document.write("<br>")
+        
+      }
+  
+      spaces()
+      //triangulo normal com variável soma para agrupar e 1 for só
+      let star = "*";
+      let soma = "";
+
+      for (let index = 0; index < 5; index++) {
+          soma = soma + star
+          document.write(soma)
+          document.write("<br>")
+      }
+
+        // triangulo normal com variável no index e 2 for
+      let number2 = 1;
+      for (let index = 0; index < 5; index++) {
+          for (let index = 0; index < number2; index++) {
+      document.write(ast)
+
+      }
+      document.write("<br>")
+      number2++
+      }
+
+   spaces()
+      //quadrado
+    
+      for (let index = 0; index < 5; index++) {
+          for (let index = 0; index < 5; index++){
+          document.write(star)
+           }
+            document.write("<br>")
+        }
+
+     spaces()
+
+
+
+   spaces()
+
+      let space = " ";
+      let stre = "*"
+      let tamanho = 5
+      let numeroEstrela = 1
+
+      for (let index = 0; index < tamanho; index++) {
+        let linha = ""
+
+          for (let index = 0; index < tamanho - numeroEstrela; index++) {
+            linha = linha + space
+          }
+
+          for (let index = 0; index < numeroEstrela; index++) {
+              linha = linha + stre;
+          }
+
+          console.log(linha)
+
+          numeroEstrela++
+      }      
+
+    </script>
+  </body>
+</html>
